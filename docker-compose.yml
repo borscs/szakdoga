@@ -1,0 +1,12 @@
+version: "2"
+services:
+  web:
+    build:
+      context: ./php
+      dockerfile: Dockerfile
+    container_name: szakdoga
+    volumes:
+      - ./php:/var/www/html/
+    ports:
+      - 8000:80
+
