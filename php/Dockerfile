@@ -1,6 +1,4 @@
 FROM trzeci/emscripten AS qtbuilder
-FROM ubuntu:latest
-
 # Update apps on the base image
 RUN apt-get -y update && apt-get install -y
 
