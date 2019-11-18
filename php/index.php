@@ -11,55 +11,23 @@
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/style.css">
-    <script src="js/vendor/modernizr-2.8.3.min.js"></script>
-    <script src="js/vendor/jquery-1.12.0.min.js"></script>
-    <script src="bootstrap-3.3.7/js/bootstrap.min.js" </script>
-    <
-    script
-    src = "bootstrap-3.3.7/js/bootstrap.js" </script>
-</head>
 <body>
 <div class="main">
-
     <div class="row">
         <div class="col-sm-12">
             <nav class="shadow navbar navbar-inverse navbar-fixed-top nbar">
-                <div class="navbar-header">
-                    <a class="navbar-brand lspace" href="index.php">RUET OJ</a>
-                    <button type="button" class="navbar-toggle" data-toggle="collapse"
-                            data-target=".navbar-menubuilder"><span class="sr-only">Toggle navigation</span><span
-                                class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span>
-                    </button>
-                </div>
                 <div class="collapse navbar-collapse navbar-menubuilder">
                     <ul class="nav navbar-nav">
-                        <li class="space"><a href="compiler.php"><i class="fa fa-code ispace"></i>Compiler</a></li>
-                        <li class="space"><a href="archive.php"><i class="fa fa-archive ispace"></i>Problem Archive</a>
-                        </li>
-                        <li class="space"><a href="contest.php"><i class="fa fa-cogs ispace"></i>Contests</a></li>
-                        <li class="space"><a href="#"><i class="fa fa-check-square ispace"></i>Debug</a></li>
-
-
+                        <li class="space"><a href="index.php"><i class="fa fa-code ispace"></i>Compiler</a></li>
                     </ul>
                 </div>
             </nav>
         </div>
     </div>
-
-
     <div class="row log">
         <div class="col-sm-10">
             <div class=""><h3 style="text-align:center;">Online Compiler</h3></div>
         </div>
-
-        <div class="col-sm-1">
-
-        </div>
-
-        <div class="col-sm-1">
-
-        </div>
-
     </div>
 
     <div class="row cspace">
@@ -67,21 +35,17 @@
             <div class="form-group">
                 <form action="compile.php" name="f2" method="POST">
                     <label for="lang">Choose Language</label>
-
                     <select class="form-control" name="language">
                         <option value="c">C</option>
                         <option value="cpp">C++</option>
                         <option value="cpp11">C++11</option>
-
-                    </select><br><br>
+                    </select>
 
                     <label for="ta">Write Your Code</label>
-                    <textarea class="form-control" name="code" rows="10" cols="50"></textarea><br><br>
+                    <textarea class="form-control" name="code" rows="10" cols="50"></textarea>
                     <label for="in">Enter Your Input</label>
-                    <textarea class="form-control" name="input" rows="10" cols="50"></textarea><br><br>
-                    <input type="submit" class="btn btn-success" value="Run Code"><br><br><br>
-
-
+                    <textarea class="form-control" name="input" rows="10" cols="50"></textarea>
+                    <input type="submit" class="btn btn-success" value="Run Code">
                 </form>
 
             </div>
