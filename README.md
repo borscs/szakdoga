@@ -10,7 +10,7 @@ C , C++
 Linux, gcc, g++,
 
 
-# Change Permission
+# Change Permission php folder
 ```
-chmod -R 777 Online-Compiler
+chmod -R 777 php
 ``` 

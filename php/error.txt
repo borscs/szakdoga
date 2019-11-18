@@ -1,0 +1,3 @@
+main.cpp:1:1: error: 'asfasfasda' does not name a type
+ asfasfasda
+ ^~~~~~~~~~
