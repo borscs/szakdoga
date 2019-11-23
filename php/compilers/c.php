@@ -10,7 +10,10 @@
 	$command=$CC." -lm ".$filename_code;	
 	$command_error=$command." 2>".$filename_error;
 	$check=0;
-	
+
+	if(trim($code)=="")
+		die("The code is empty");
+
 	$file_code=fopen($filename_code,"w+");
 	fwrite($file_code,$code);
 	fclose($file_code);
@@ -30,7 +33,8 @@
 			$out=$out." < ".$filename_in;
 			$output=shell_exec($out);
 		}
-        echo "<textarea id='div' class=\"form-control\" name=\"output\" rows=\"10\" cols=\"50\">$output</textarea>";
+        echo "<textarea id='div' class=\"form-control\" name=\"the man
+\" rows=\"10\" cols=\"50\">$output</textarea>";
 	}
 	else if(!strpos($error,"error")) {
 		echo "<pre>$error</pre>";

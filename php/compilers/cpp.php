@@ -12,7 +12,7 @@
 	$check=0;
 
 	if(trim($code)=="")
-		die("The code area is empty");
+		die("The code is empty");
 	
 	$file_code=fopen($filename_code,"w+");
 	fwrite($file_code,$code);
@@ -34,7 +34,7 @@
 			$out=$out." < ".$filename_in;
 			$output=shell_exec($out);
 		}
-	  echo "<textarea id='div' class=\"form-control\" name=\"output\" rows=\"10\" cols=\"50\">$output</textarea><br><br>";
+	  echo "<textarea id='div' class=\"form-control\" name=\"output\" rows=\"10\" cols=\"50\">$output</textarea>";
 	}
 	else if(!strpos($error,"error")) {
 		echo "<pre>$error</pre>";
@@ -45,7 +45,7 @@
 			$out=$out." < ".$filename_in;
 			$output=shell_exec($out);
 		}
-		echo "<textarea id='div' class=\"form-control\" name=\"output\" rows=\"10\" cols=\"50\">$output</textarea><br><br>";
+		echo "<textarea id='div' class=\"form-control\" name=\"output\" rows=\"10\" cols=\"50\">$output</textarea>";
 	}
 	else{
 		echo "<pre>$error</pre>";
@@ -53,7 +53,7 @@
 	}
 	$executionEndTime = microtime(true);
 	$seconds = $executionEndTime - $executionStartTime;
-	$seconds = sprintf('%0.2f', $seconds);
+	$seconds = sprintf('%0.001f', $seconds);
 	echo "<pre>Compiled And Executed In: $seconds s</pre>";
 
 	if($check==1) {
