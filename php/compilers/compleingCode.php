@@ -1,4 +1,15 @@
 <?php
+function output($input, $out, $inputFile)
+{
+    if (trim($input) == "") {
+        $output = shell_exec($out);
+    } else {
+        $out = $out . " < " . $inputFile;
+        $output = shell_exec($out);
+    }
+    return $output;
+}
+
 function CompleingCode($CC, $mainFile)
 {
 
@@ -11,19 +22,9 @@ function CompleingCode($CC, $mainFile)
 
     $inputFile = "input.txt";
     $errorFile = "error.txt";
-    $executable = "a.out";
     $check = 0;
 
-    function output($input, $out, $inputFile)
-    {
-        if (trim($input) == "") {
-            $output = shell_exec($out);
-        } else {
-            $out = $out . " < " . $inputFile;
-            $output = shell_exec($out);
-        }
-        return $output;
-    }
+
 
     $file_code = fopen($mainFile, "w+");
     fwrite($file_code, $code);
