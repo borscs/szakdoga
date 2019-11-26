@@ -44,12 +44,7 @@ function CompleingCode($CC, $mainFile)
         $output = output($input, $out, $inputFile);
         echo "<textarea id='div' class=\"form-control\" 
 			name=\"the man\" rows=\"10\" cols=\"50\">$output</textarea>";
-    } else if (!strpos($error, "error")) {
-        echo "<pre>$error</pre>";
-        $output = output($input, $out, $inputFile);
-        echo "<textarea id='div' class=\"form-control\" 
-			name=\"output\" rows=\"10\" cols=\"50\">$output</textarea>";
-    } else {
+    }  else {
         echo "<pre>$error</pre>";
         $check = false;
     }
