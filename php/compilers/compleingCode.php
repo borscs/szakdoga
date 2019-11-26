@@ -26,14 +26,14 @@ function CompleingCode($CC, $mainFile)
 
 
 
-    $file_code = fopen($mainFile, "w+");
-    fwrite($file_code, $code);
-    fclose($file_code);
+    $mainToFile = fopen($mainFile, "w+");
+    fwrite($mainToFile, $code);
+    fclose($mainToFile);
 
     if ($input != null) {
-        $file_in = fopen($inputFile, "w+");
-        fwrite($file_in, $input);
-        fclose($file_in);
+        $inputToFile = fopen($inputFile, "w+");
+        fwrite($inputToFile, $input);
+        fclose($inputToFile);
     }
 
     shell_exec($CC . " -lm " . $mainFile . " 2>" . $errorFile);
