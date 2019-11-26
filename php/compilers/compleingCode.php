@@ -54,7 +54,7 @@ function CompleingCode($CC, $mainFile)
         $check = false;
     }
 
-    $seconds = sprintf('%0.001f', microtime(true) - $startTime);
+    $seconds = sprintf('%0.5f', microtime(true) - $startTime);
 
     echo "<pre>Compiled And Executed In: $seconds s</pre>";
 
