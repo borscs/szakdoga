@@ -43,7 +43,7 @@ function CompleingCode($CC, $mainFile)
     if (trim($error) == "") {
         $output = output($input, $out, $inputFile);
         echo "<textarea id='div' class=\"form-control\" 
-			name=\"the man\" rows=\"10\" cols=\"50\">$output</textarea>";
+		name=\"the man\" rows=\"10\" cols=\"50\">$output</textarea>";
     }  else {
         echo "<pre>$error</pre>";
         $check = false;
