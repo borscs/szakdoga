@@ -1,5 +1,5 @@
 <?php
-function CompleingCode($CC)
+function CompleingCode($CC, $mainFile)
 {
 
     $out = "timeout 5s ./a.out";
@@ -9,7 +9,6 @@ function CompleingCode($CC)
     if (trim($code) == "")
         die("The code is empty");
 
-    $mainFile = "main.c";
     $inputFile = "input.txt";
     $errorFile = "error.txt";
     $executable = "a.out";

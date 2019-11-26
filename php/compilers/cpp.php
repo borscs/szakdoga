@@ -1,5 +1,6 @@
 <?php
 include 'compleingCode.php';
 $CC = "g++";
-CompleingCode($CC);
+$mainFile = "main.cpp";
+CompleingCode($CC, $mainFile);
 ?>
