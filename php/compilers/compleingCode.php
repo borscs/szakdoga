@@ -18,7 +18,7 @@ function CompleingCode($CC, $mainFile)
     $input = $_POST["input"];
 
     if (trim($code) == "")
-        die("<pre>The code is empty</pre>");
+        die("The code is empty");
 
     $inputFile = "input.txt";
     $errorFile = "error.txt";
