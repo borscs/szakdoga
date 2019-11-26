@@ -55,11 +55,7 @@ function CompleingCode($CC, $mainFile)
 
     if ($check) {
         echo "<pre>Verdict : CE</pre>";
-    } else if ($check && $seconds > 3) {
-        echo "<pre>Verdict : TLE</pre>";
-    } else if (trim($output) == "") {
-        echo "<pre>Verdict : WA</pre>";
-    } else if ($check) {
+    } else{
         echo "<pre>Verdict : AC</pre>";
     }
 }
