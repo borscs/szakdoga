@@ -22,7 +22,7 @@ function CompleingCode($CC, $mainFile)
 
     $inputFile = "input.txt";
     $errorFile = "error.txt";
-    $check = 0;
+    $check = true;
 
 
 
@@ -51,20 +51,20 @@ function CompleingCode($CC, $mainFile)
 			name=\"output\" rows=\"10\" cols=\"50\">$output</textarea>";
     } else {
         echo "<pre>$error</pre>";
-        $check = 1;
+        $check = false;
     }
 
     $seconds = sprintf('%0.001f', microtime(true) - $startTime);
 
     echo "<pre>Compiled And Executed In: $seconds s</pre>";
 
-    if ($check == 1) {
+    if ($check) {
         echo "<pre>Verdict : CE</pre>";
-    } else if ($check == 0 && $seconds > 3) {
+    } else if ($check && $seconds > 3) {
         echo "<pre>Verdict : TLE</pre>";
     } else if (trim($output) == "") {
         echo "<pre>Verdict : WA</pre>";
-    } else if ($check == 0) {
+    } else if ($check) {
         echo "<pre>Verdict : AC</pre>";
     }
 }
