@@ -54,9 +54,9 @@ function CompleingCode($CC, $mainFile)
     echo "<pre>Compiled And Executed In: $seconds s</pre>";
 
     if ($check) {
-        echo "<pre>Verdict : CE</pre>";
-    } else{
         echo "<pre>Verdict : AC</pre>";
+    } else{
+        echo "<pre>Verdict : CE</pre>";
     }
 }
 
